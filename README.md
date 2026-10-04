@@ -49,7 +49,7 @@ The project was created using HTML, CSS, and Bootstrap and is designed to work o
 
 ## Individual Contributions
 
-### Student 1 — Narges Jowkar
+### Student 1 â€” Narges Jowkar
 
 - Developed the Home page
 - Developed the Clothes page
@@ -59,7 +59,7 @@ The project was created using HTML, CSS, and Bootstrap and is designed to work o
 - Implemented hover and focus effects
 - Worked on responsive design
 
-### Student 2 — Zhanbolat Tulepbergen
+### Student 2 â€” Zhanbolat Tulepbergen
 
 - Developed the Gadgets page
 - Developed the Cosmetics page
@@ -90,5 +90,4 @@ The project was created using HTML, CSS, and Bootstrap and is designed to work o
 ![VELORA Cosmetics Page](screenshots/cosmetics.png)
 
 ## Published Website
-
-[VELORA Online Shop](PASTE_GITHUB_PAGES_LINK_HERE)
+[VELORA Online Shop](https://nargess377.github.io/online-shop/)
