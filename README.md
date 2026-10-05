@@ -8,6 +8,7 @@ VELORA is a responsive multi-page online shopping website for fashion, beauty, a
 
 - IT-2513 Narges Jowkar
 - IT-2513 Zhanbolat Tulepbergen
+- IT-2513 Avirup Roy
 
 ## Project Description
 
