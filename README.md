@@ -72,6 +72,15 @@ The project was created using HTML, CSS, and Bootstrap and is designed to work o
 - Implemented CSS positioning and `:nth-child()`
 - Worked on responsive design
 
+### Student 3 — Avirup Roy
+- Developed the Contact form structure and validation attributes
+- Tested all navigation links and fixed broken paths between pages
+- Performed final code cleanup and cross-browser testing
+- Implemented CSS variables in `:root` and applied them consistently across the stylesheet
+- Applied Bootstrap utility classes and ensured Bootstrap was linked on all pages
+- Added `loading="lazy"` to below-the-fold images for performance
+
+
 ## Screenshots
 
 ### Home Page
