@@ -5,38 +5,44 @@
     --text-color: #222;
     --muted-text: #555;
 }
+
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
 }
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
 }
-nav{
-    display:flex;
-        gap:25px;
+
+nav {
+    display: flex;
+    gap: 25px;
 }
+
     nav a {
         text-decoration: none;
         color: var(--text-color);
         font-weight: 500;
         transition: color 0.3s ease;
     }
+
         nav a:hover {
             color: var(--primary-color);
         }
+
 header h1 {
     color: var(--primary-color);
     font-size: 30px;
     margin: 0;
 }
+
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background-color: #f5f0ff;
     background-color: var(--light-background);
 }
 
@@ -50,6 +56,7 @@ header h1 {
         color: var(--muted-text);
         margin-bottom: 30px;
     }
+
 .shop-btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -64,6 +71,7 @@ header h1 {
     .shop-btn:hover {
         background-color: var(--primary-dark);
     }
+
 .categories {
     padding: 70px 60px;
     text-align: center;
@@ -79,6 +87,7 @@ header h1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+
 .category-card {
     background-color: white;
     border-radius: 12px;
@@ -100,9 +109,11 @@ header h1 {
         color: var(--primary-color);
         font-weight: 600;
     }
+
     .category-card:hover {
         transform: translateY(-8px);
     }
+
 .featured {
     padding: 70px 60px;
     text-align: center;
@@ -144,6 +155,7 @@ header h1 {
         color: var(--primary-color);
         font-weight: 600;
     }
+
 footer {
     background-color: #222;
     color: white;
@@ -164,20 +176,7 @@ footer {
         footer a:hover {
             color: white;
         }
-        @media (max-width: 900px){
-            header{
-                flex-direction: column;
-                gap: 15px;
-                padding: 20px 30px;
-            }
-            .category-grid, .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .categories,
-            .featured {
-                padding: 50px 30px;
-            }
-        }
+
 .products-page {
     padding: 60px 0;
 }
@@ -188,13 +187,14 @@ footer {
     margin-left: 20px;
     margin-right: 20px;
 }
-.about {
+
+.about, .contact {
     max-width: 800px;
     margin: 0 auto;
     padding: 70px 30px;
 }
 
-    .about h2 {
+    .about h2, .contact h2 {
         font-size: 36px;
         margin-bottom: 20px;
         color: var(--primary-color);
@@ -205,24 +205,9 @@ footer {
         margin-bottom: 20px;
     }
 
-    .about p {
+    .about p, .about li {
         line-height: 1.7;
         color: var(--muted-text);
-    }
-
-    .about li {
-        margin-bottom: 10px;
-    }
-.contact {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 70px 30px;
-}
-
-    .contact h2 {
-        font-size: 36px;
-        color: var(--primary-color);
-        margin-bottom: 15px;
     }
 
     .contact form {
@@ -264,11 +249,28 @@ footer {
         .contact button:hover {
             background-color: var(--primary-dark);
         }
+
 .category-card:nth-child(2) {
     background-color: #faf7ff;
 }
-@media (max-width: 600px) {
 
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 30px;
+    }
+
+    .category-grid, .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories, .featured {
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 600px) {
     nav {
         flex-wrap: wrap;
         justify-content: center;
@@ -283,13 +285,41 @@ footer {
             font-size: 36px;
         }
 
-    .category-grid,
-    .product-grid {
+    .category-grid, .product-grid {
         grid-template-columns: 1fr;
     }
 
-    .categories,
-    .featured {
+    .categories, .featured {
         padding: 40px 20px;
     }
+}
+
+.error-msg {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.success-msg {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+#strengthIndicator {
+    font-weight: bold;
+}
+
+.weak {
+    color: red;
+}
+
+.medium {
+    color: orange;
+}
+
+.strong {
+    color: green;
 }
