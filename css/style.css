@@ -323,3 +323,227 @@ footer {
 .strong {
     color: green;
 }
+.about-intro {
+    background-color: var(--light-background);
+    padding: 70px 20px;
+}
+
+.about-intro h2 {
+    color: var(--primary-color);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-intro p {
+    color: var(--muted-text);
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 10px auto;
+}
+
+.about-categories h2,
+.about-benefits h2,
+.about-mission h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+.about-categories .category-card {
+    height: 100%;
+}
+
+.about-categories .category-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.about-benefits {
+    background-color: var(--light-background);
+}
+
+.about-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.benefit-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card:nth-child(2) {
+    background-color: #faf7ff;
+}
+
+.benefit-card h3 {
+    color: var(--primary-color);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    color: var(--muted-text);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+.about-mission {
+    padding: 70px 20px;
+}
+
+.about-mission p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    color: var(--muted-text);
+}
+
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    display: inline-block;
+    margin: 8px 10px;
+}
+
+
+@media (max-width: 600px) {
+
+    .about-intro {
+        padding: 50px 20px;
+    }
+
+    .about-intro h2 {
+        font-size: 30px;
+    }
+
+    .about-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-categories h2,
+    .about-benefits h2,
+    .about-mission h2 {
+        font-size: 27px;
+    }
+}
+.cosmetics-intro {
+    background-color: var(--light-background);
+    padding: 55px 20px;
+}
+
+.cosmetics-intro h2 {
+    color: var(--primary-color);
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.cosmetics-intro p {
+    color: var(--muted-text);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+
+.cosmetics-card {
+    height: 100%;
+}
+
+.cosmetics-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin: 12px 0;
+}
+
+.product-info p {
+    color: var(--muted-text);
+    line-height: 1.6;
+}
+
+.product-category {
+    display: inline-block;
+    color: var(--primary-color);
+    background-color: var(--light-background);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.product-info .product-price {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product-link {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.product-link:hover {
+    color: var(--primary-dark);
+}
+
+
+.beauty-banner {
+    background-color: var(--light-background);
+    padding: 60px 20px;
+    margin-top: 30px;
+}
+
+.beauty-banner h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.beauty-banner p {
+    color: var(--muted-text);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+
+@media (max-width: 600px) {
+
+    .cosmetics-intro h2 {
+        font-size: 30px;
+    }
+
+    .beauty-banner h2 {
+        font-size: 27px;
+    }
+
+    .cosmetics-card img {
+        height: 220px;
+    }
+}
