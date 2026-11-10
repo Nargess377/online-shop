@@ -143,7 +143,7 @@ $(document).ready(function() {
         currentIndex = $(this).index(".lightbox-img");
         let src = $(this).attr("src");
         $("#lightboxImg").attr("src", src);
-        $("#lightbox").fadeIn(400);
+        $("#lightbox").fadeIn(400).css("display", "flex");
     });
 
     $("#closeLightbox").click(function() {

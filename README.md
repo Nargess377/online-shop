@@ -133,4 +133,4 @@ The project was created using HTML, CSS, Bootstrap, JavaScript, and jQuery. It i
 ![6](screenshots/image-6.png)
 
 ### Endterm: Lightbox Gallery
-![7](screenshots/image-7.png)
+![x](screenshots/imageX.png)
