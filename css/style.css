@@ -23,16 +23,16 @@ nav {
     gap: 25px;
 }
 
-    nav a {
-        text-decoration: none;
-        color: var(--text-color);
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
-        nav a:hover {
-            color: var(--primary-color);
-        }
+nav a:hover {
+    color: var(--primary-color);
+}
 
 header h1 {
     color: var(--primary-color);
@@ -46,16 +46,16 @@ header h1 {
     background-color: var(--light-background);
 }
 
-    .hero h2 {
-        font-size: 48px;
-        margin-bottom: 15px;
-    }
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
 
-    .hero p {
-        font-size: 18px;
-        color: var(--muted-text);
-        margin-bottom: 30px;
-    }
+.hero p {
+    font-size: 18px;
+    color: var(--muted-text);
+    margin-bottom: 30px;
+}
 
 .shop-btn {
     display: inline-block;
@@ -68,19 +68,19 @@ header h1 {
     transition: background-color 0.3s ease;
 }
 
-    .shop-btn:hover {
-        background-color: var(--primary-dark);
-    }
+.shop-btn:hover {
+    background-color: var(--primary-dark);
+}
 
 .categories {
     padding: 70px 60px;
     text-align: center;
 }
 
-    .categories h2 {
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
+.categories h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
 
 .category-grid {
     display: grid;
@@ -98,21 +98,21 @@ header h1 {
     position: relative;
 }
 
-    .category-card img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
+.category-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
 
-    .category-card a {
-        text-decoration: none;
-        color: var(--primary-color);
-        font-weight: 600;
-    }
+.category-card a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
 
-    .category-card:hover {
-        transform: translateY(-8px);
-    }
+.category-card:hover {
+    transform: translateY(-8px);
+}
 
 .featured {
     padding: 70px 60px;
@@ -120,10 +120,10 @@ header h1 {
     background-color: #f8f8f8;
 }
 
-    .featured h2 {
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
+.featured h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
 
 .product-grid {
     display: grid;
@@ -140,21 +140,21 @@ header h1 {
     transition: transform 0.3s ease;
 }
 
-    .product-card:hover {
-        transform: translateY(-8px);
-    }
+.product-card:hover {
+    transform: translateY(-8px);
+}
 
-    .product-card img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
 
-    .product-card a {
-        text-decoration: none;
-        color: var(--primary-color);
-        font-weight: 600;
-    }
+.product-card a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
 
 footer {
     background-color: #222;
@@ -163,19 +163,19 @@ footer {
     padding: 30px 20px;
 }
 
-    footer p {
-        margin: 8px 0;
-    }
+footer p {
+    margin: 8px 0;
+}
 
-    footer a {
-        color: #c4b5fd;
-        text-decoration: none;
-        margin: 0 10px;
-    }
+footer a {
+    color: #c4b5fd;
+    text-decoration: none;
+    margin: 0 10px;
+}
 
-        footer a:hover {
-            color: white;
-        }
+footer a:hover {
+    color: white;
+}
 
 .products-page {
     padding: 60px 0;
@@ -194,104 +194,64 @@ footer {
     padding: 70px 30px;
 }
 
-    .about h2, .contact h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: var(--primary-color);
-    }
+.about h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
 
-    .about h3 {
-        margin-top: 35px;
-        margin-bottom: 20px;
-    }
+.about h3 {
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
 
-    .about p, .about li {
-        line-height: 1.7;
-        color: var(--muted-text);
-    }
+.about p, .about li {
+    line-height: 1.7;
+    color: var(--muted-text);
+}
 
-    .contact form {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
-    }
+.contact form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
 
-    .contact label {
-        margin-top: 15px;
-        margin-bottom: 8px;
-        font-weight: 600;
-    }
+.contact label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
 
-    .contact input,
-    .contact textarea {
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-family: inherit;
-    }
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
 
-        .contact input:focus,
-        .contact textarea:focus {
-            outline: 2px solid var(--primary-color);
-        }
+.contact input:focus,
+.contact textarea:focus {
+    outline: 2px solid var(--primary-color);
+}
 
-    .contact button {
-        margin-top: 20px;
-        padding: 12px;
-        border: none;
-        border-radius: 6px;
-        background-color: var(--primary-color);
-        color: white;
-        font-weight: 600;
-        cursor: pointer;
-    }
+.contact button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
 
-        .contact button:hover {
-            background-color: var(--primary-dark);
-        }
+.contact button:hover {
+    background-color: var(--primary-dark);
+}
 
 .category-card:nth-child(2) {
     background-color: #faf7ff;
-}
-
-@media (max-width: 900px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px 30px;
-    }
-
-    .category-grid, .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .categories, .featured {
-        padding: 50px 30px;
-    }
-}
-
-@media (max-width: 600px) {
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px 18px;
-    }
-
-    .hero {
-        padding: 70px 20px;
-    }
-
-        .hero h2 {
-            font-size: 36px;
-        }
-
-    .category-grid, .product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .categories, .featured {
-        padding: 40px 20px;
-    }
 }
 
 .error-msg {
@@ -312,238 +272,98 @@ footer {
     font-weight: bold;
 }
 
-.weak {
-    color: red;
-}
+.weak { color: red; }
+.medium { color: orange; }
+.strong { color: green; }
 
-.medium {
-    color: orange;
-}
-
-.strong {
-    color: green;
-}
-.about-intro {
-    background-color: var(--light-background);
-    padding: 70px 20px;
-}
-
-.about-intro h2 {
+.filter-btn {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
     color: var(--primary-color);
-    font-size: 36px;
-    margin-bottom: 20px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-.about-intro p {
-    color: var(--muted-text);
-    line-height: 1.8;
-    max-width: 750px;
-    margin: 10px auto;
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
 }
 
-.about-categories h2,
-.about-benefits h2,
-.about-mission h2 {
-    color: var(--primary-color);
-    font-size: 32px;
-    margin-bottom: 30px;
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
 }
 
-
-.about-categories .category-card {
-    height: 100%;
+#lightboxImg {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
 }
 
-.about-categories .category-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+#closeLightbox {
+    position: absolute;
+    top: 20px; right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
 }
 
-
-.about-benefits {
-    background-color: var(--light-background);
+#prevArrow, #nextArrow {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    padding: 20px;
+    user-select: none;
 }
 
-.about-benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+#prevArrow { left: 20px; }
+#nextArrow { right: 20px; }
+
+.lightbox-img {
+    cursor: pointer;
 }
 
-.benefit-card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 30px;
+    }
+    .category-grid, .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .categories, .featured {
+        padding: 50px 30px;
+    }
 }
-
-.benefit-card:hover {
-    transform: translateY(-5px);
-}
-
-.benefit-card:nth-child(2) {
-    background-color: #faf7ff;
-}
-
-.benefit-card h3 {
-    color: var(--primary-color);
-    font-size: 21px;
-    margin-bottom: 12px;
-}
-
-.benefit-card p {
-    color: var(--muted-text);
-    line-height: 1.7;
-    margin-bottom: 0;
-}
-
-
-.about-mission {
-    padding: 70px 20px;
-}
-
-.about-mission p {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    line-height: 1.8;
-    color: var(--muted-text);
-}
-
-
-.footer-links {
-    margin: 20px 0;
-}
-
-.footer-links a {
-    display: inline-block;
-    margin: 8px 10px;
-}
-
 
 @media (max-width: 600px) {
-
-    .about-intro {
-        padding: 50px 20px;
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
     }
-
-    .about-intro h2 {
-        font-size: 30px;
-    }
-
-    .about-benefits-grid {
+    .hero { padding: 70px 20px; }
+    .hero h2 { font-size: 36px; }
+    .category-grid, .product-grid {
         grid-template-columns: 1fr;
     }
-
-    .about-categories h2,
-    .about-benefits h2,
-    .about-mission h2 {
-        font-size: 27px;
+    .categories, .featured {
+        padding: 40px 20px;
     }
-}
-.cosmetics-intro {
-    background-color: var(--light-background);
-    padding: 55px 20px;
-}
-
-.cosmetics-intro h2 {
-    color: var(--primary-color);
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.cosmetics-intro p {
-    color: var(--muted-text);
-    max-width: 650px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-
-.cosmetics-card {
-    height: 100%;
-}
-
-.cosmetics-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 20px;
-}
-
-.product-info h3 {
-    margin: 12px 0;
-}
-
-.product-info p {
-    color: var(--muted-text);
-    line-height: 1.6;
-}
-
-.product-category {
-    display: inline-block;
-    color: var(--primary-color);
-    background-color: var(--light-background);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.product-info .product-price {
-    color: var(--primary-color);
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.product-link {
-    display: inline-block;
-    margin-top: 5px;
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-.product-link:hover {
-    color: var(--primary-dark);
-}
-
-
-.beauty-banner {
-    background-color: var(--light-background);
-    padding: 60px 20px;
-    margin-top: 30px;
-}
-
-.beauty-banner h2 {
-    color: var(--primary-color);
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.beauty-banner p {
-    color: var(--muted-text);
-    margin-bottom: 25px;
-    line-height: 1.7;
-}
-
-
-@media (max-width: 600px) {
-
-    .cosmetics-intro h2 {
+    #prevArrow, #nextArrow {
         font-size: 30px;
+        padding: 10px;
     }
-
-    .beauty-banner h2 {
-        font-size: 27px;
-    }
-
-    .cosmetics-card img {
-        height: 220px;
-    }
+    #prevArrow { left: 5px; }
+    #nextArrow { right: 5px; }
 }

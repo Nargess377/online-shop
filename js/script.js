@@ -1,11 +1,11 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    $("#password").on("keyup", function () {
+    $("#password").on("keyup", function() {
         let val = $(this).val();
         let indicator = $("#strengthIndicator");
-
+        
         if (val.length === 0) {
             indicator.text("");
         } else if (val.length < 6) {
@@ -17,7 +17,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#confirmPassword").on("keyup", function () {
+    $("#confirmPassword").on("keyup", function() {
         let pass = $("#password").val();
         let confirm = $(this).val();
         if (confirm !== pass) {
@@ -27,7 +27,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#regForm").submit(function (event) {
+    $("#regForm").submit(function(event) {
         event.preventDefault();
         let isValid = true;
 
@@ -63,7 +63,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#addProductBtn").click(function () {
+    $("#addProductBtn").click(function() {
         let name = $("#newProductName").val().trim();
         let price = $("#newProductPrice").val().trim();
 
@@ -76,7 +76,7 @@ $(document).ready(function () {
                     <button class="btn btn-sm btn-danger delete-btn">Delete</button>
                 </td>
             </tr>`;
-
+            
             $("#productTableBody").append(row);
             $("#newProductName").val("");
             $("#newProductPrice").val("");
@@ -85,13 +85,13 @@ $(document).ready(function () {
         }
     });
 
-    $("#productTableBody").on("click", ".delete-btn", function () {
+    $("#productTableBody").on("click", ".delete-btn", function() {
         if (confirm("Are you sure you want to delete this product?")) {
             $(this).closest("tr").remove();
         }
     });
 
-    $("#productTableBody").on("click", ".edit-btn", function () {
+    $("#productTableBody").on("click", ".edit-btn", function() {
         let row = $(this).closest("tr");
         let currentName = row.find("td").eq(0).text();
         let currentPrice = row.find("td").eq(1).text();
@@ -103,6 +103,69 @@ $(document).ready(function () {
             row.find("td").eq(0).text(newName);
             row.find("td").eq(1).text(newPrice);
         }
+    });
+
+    let activeCategory = "all";
+
+    $(".filter-btn").click(function() {
+        $(".filter-btn").removeClass("active");
+        $(this).addClass("active");
+        activeCategory = $(this).data("category");
+        filterProducts();
+    });
+
+    $("#searchInput").keyup(function() {
+        filterProducts();
+    });
+
+    function filterProducts() {
+        let searchText = $("#searchInput").val().toLowerCase();
+        
+        $(".product-card").each(function() {
+            let name = $(this).data("name").toLowerCase();
+            let category = $(this).data("category");
+
+            let matchesSearch = name.includes(searchText);
+            let matchesCategory = (activeCategory === "all" || category === activeCategory);
+
+            if (matchesSearch && matchesCategory) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    }
+
+    let images = $(".lightbox-img");
+    let currentIndex = 0;
+
+    $(".lightbox-img").click(function() {
+        currentIndex = $(this).index(".lightbox-img");
+        let src = $(this).attr("src");
+        $("#lightboxImg").attr("src", src);
+        $("#lightbox").fadeIn(400);
+    });
+
+    $("#closeLightbox").click(function() {
+        $("#lightbox").fadeOut(400);
+    });
+
+    $("#nextArrow").click(function(e) {
+        e.stopPropagation();
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+        $("#lightboxImg").attr("src", $(images[currentIndex]).attr("src"));
+    });
+
+    $("#prevArrow").click(function(e) {
+        e.stopPropagation();
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        }
+        $("#lightboxImg").attr("src", $(images[currentIndex]).attr("src"));
     });
 
 });
