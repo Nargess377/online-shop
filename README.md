@@ -64,7 +64,7 @@ The project was created using HTML, CSS, Bootstrap, JavaScript, and jQuery. It i
 
 ### Midterm Contributions
 
-**Student 1 — Narges Jowkar**
+**Student 1: Narges Jowkar**
 - Developed the Home page
 - Developed the Clothes page
 - Developed the Contact page
@@ -73,7 +73,7 @@ The project was created using HTML, CSS, Bootstrap, JavaScript, and jQuery. It i
 - Implemented hover and focus effects
 - Worked on responsive design
 
-**Student 2 — Zhanbolat Tulepbergen**
+**Student 2: Zhanbolat Tulepbergen**
 - Developed the Gadgets page
 - Developed the Cosmetics page
 - Developed the About page
@@ -84,7 +84,7 @@ The project was created using HTML, CSS, Bootstrap, JavaScript, and jQuery. It i
 - Implemented CSS positioning and `:nth-child()`
 - Worked on responsive design
 
-**Student 3 — Avirup Roy**
+**Student 3: Avirup Roy**
 - Developed the Contact form structure and validation attributes
 - Tested all navigation links and fixed broken paths between pages
 - Performed final code cleanup and cross-browser testing
@@ -94,17 +94,17 @@ The project was created using HTML, CSS, Bootstrap, JavaScript, and jQuery. It i
 
 ### Endterm Contributions
 
-**Student 1 — Narges Jowkar**
+**Student 1: Narges Jowkar**
 - Developed the Registration Form page (`register.html`).
 - Implemented real-time Email RegEx validation.
 - Implemented the Password Strength Indicator (Weak/Medium/Strong) using jQuery events.
 
-**Student 2 — Zhanbolat Tulepbergen**
+**Student 2: Zhanbolat Tulepbergen**
 - Implemented the dynamic Search Bar and Category Filter logic on the Home page.
 - Developed the Lightbox Image Gallery.
 - Added jQuery `.fadeIn()` and `.fadeOut()` transitions and navigation arrows for the lightbox.
 
-**Student 3 — Avirup Roy**
+**Student 3: Avirup Roy**
 - Developed the Admin CRUD Table page (`admin.html`).
 - Implemented the "Create" (Add) and "Read" (Display) functionality using jQuery `.append()`.
 - Implemented the "Update" (Edit via prompt) and "Delete" (with confirmation) functionality.
