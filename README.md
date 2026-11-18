@@ -80,10 +80,12 @@ We used AI tools as supporting help, mainly for reviewing code we'd already writ
 
 ## Screenshots
 
-### Home Page (with Search & Filter)
+### Home Page (with Search & Filter; Light and Dark Mode)
 ![0](screenshots/image.png)
 
 ![1](screenshots/image-1.png)
+
+![13](screenshots/image-13.png)
 
 ### Clothes Page
 ![2](screenshots/image-2.png)
@@ -108,5 +110,5 @@ We used AI tools as supporting help, mainly for reviewing code we'd already writ
 ### About & FAQ Section
 ![12](screenshots/image-12.png)
 
-### API Integration (Dark Mode)
-![13](screenshots/image-13.png)
+### API Integration
+![X](screenshots/imageX.png)
