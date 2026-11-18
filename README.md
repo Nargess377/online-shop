@@ -1,6 +1,9 @@
 # VELORA Online Shop
 
 **Live site:** https://nargess377.github.io/online-shop
+
+**Report** https://drive.google.com/file/d/1ijptS-gkJlePFG2xDUWikSW5SbBvExJo/view?usp=sharing
+
 **Presentation** https://docs.google.com/presentation/d/1d5a2gnuqCyqR2kR8gf6PFVHbecJ08AOvcVwoAIwt8VE/edit?usp=sharing
 
 ## What this is
@@ -76,7 +79,7 @@ At the very end we did a shared pass fixing small bugs, the confirm-password mes
 
 ## AI usage
 
-We used AI tools as supporting help, mainly for reviewing code we'd already written, spotting bugs we missed, and proofreading this README. For example, AI helped us find the confirm-password class bug and suggested switching the strength indicator to count character types instead of length only. We did not copy-paste code without reading it.
+We used AI tools as supporting help during the project, mainly for code review, bug spotting, and proofreading documentation. It was not used to generate the site's structure, code, or main features.
 
 ## Screenshots
 
@@ -87,6 +90,25 @@ We used AI tools as supporting help, mainly for reviewing code we'd already writ
 
 ![13](screenshots/image-13.png)
 
+### API Integration
+![X](screenshots/imageX.png)
+
+### Account Page (Sign-in + Registration)
+![8](screenshots/image-8.png)
+
+![9](screenshots/image-9.png)
+
+![Y](screenshots/imageY.png)
+
+### About & FAQ Section
+![12](screenshots/image-12.png)
+
+### Admin CRUD Table
+![10](screenshots/image-10.png)
+
+### Lightbox Gallery
+![11](screenshots/image-11.png)
+
 ### Clothes Page
 ![2](screenshots/image-2.png)
 
@@ -96,19 +118,3 @@ We used AI tools as supporting help, mainly for reviewing code we'd already writ
 ### Cosmetics Page
 ![4](screenshots/image-4.png)
 
-### Account Page (Sign-in + Registration)
-![8](screenshots/image-8.png)
-
-![9](screenshots/image-9.png)
-
-### Admin CRUD Table
-![10](screenshots/image-10.png)
-
-### Lightbox Gallery
-![11](screenshots/image-11.png)
-
-### About & FAQ Section
-![12](screenshots/image-12.png)
-
-### API Integration
-![X](screenshots/imageX.png)

@@ -317,11 +317,28 @@ footer a:hover {
 
 @media (max-width: 900px) {
     header { flex-direction: column; gap: 15px; padding: 20px 30px; }
+
+    /* NEW: allow nav items to wrap onto multiple rows on narrow screens */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* NEW: slightly smaller nav text so more items fit per row */
+    nav a, #theme-toggle, #logout-btn {
+        font-size: 14px;
+    }
+
     .category-grid, .product-grid { grid-template-columns: repeat(2, 1fr); }
     .categories, .featured { padding: 50px 30px; }
 }
 
 @media (max-width: 600px) {
+    /* NEW: tighter spacing on small phones */
+    nav { gap: 8px; }
+    nav a, #theme-toggle, #logout-btn { font-size: 13px; }
+
     .category-grid, .product-grid { grid-template-columns: 1fr; }
     .categories, .featured { padding: 40px 20px; }
     #prevArrow, #nextArrow { font-size: 30px; padding: 10px; }
