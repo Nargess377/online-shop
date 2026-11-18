@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | VELORA</title>
+    <title>Account | VELORA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,43 +21,57 @@
             <a href="api.html">API Shop</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="register.html">Register</a>
-            <a href="admin.html">Admin</a>
+            <a href="account.html" id="auth-link">Account</a>
+            <a href="admin.html" id="admin-link" style="display:none;">Admin</a>
+            <button id="logout-btn" style="display:none;">Logout</button>
             <button id="theme-toggle">Dark Mode</button>
         </nav>
     </header>
 
-    <main class="container mt-5" style="max-width: 600px;">
-        <h2 class="text-center mb-4">Create an Account</h2>
-        
+    <main class="account-section">
+        <h2>Sign In</h2>
+        <p>Enter your details to sign in to your account.</p>
+        <form id="loginForm">
+            <label for="login-name">Username</label>
+            <input type="text" id="login-name" required>
+            <label for="login-pass">Password</label>
+            <input type="password" id="login-pass" required>
+            <div class="error-msg" id="loginError"></div>
+            <button type="submit">Sign In</button>
+        </form>
+
+        <hr style="margin: 40px 0; border-color: var(--border-color);">
+
+        <h2>Create an Account</h2>
         <form id="regForm" novalidate>
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" required>
                 <div class="error-msg" id="nameError"></div>
             </div>
-
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" required>
                 <div class="error-msg" id="emailError"></div>
             </div>
-
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" required>
                 <div id="strengthIndicator" class="mt-2"></div>
             </div>
-
             <div class="mb-3">
                 <label for="confirmPassword" class="form-label">Confirm Password</label>
                 <input type="password" class="form-control" id="confirmPassword" required>
                 <div class="error-msg" id="confirmError"></div>
             </div>
-
             <button type="submit" class="btn btn-primary w-100" style="background-color: var(--primary-color);">Register</button>
         </form>
     </main>
+
+    <footer>
+        <p>&copy; 2026 VELORA. All rights reserved.</p>
+        <p>Email: info@velora.com</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/script.js"></script>

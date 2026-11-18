@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     if (localStorage.getItem("theme") === "dark") {
         $("body").addClass("dark-theme");
@@ -7,7 +7,7 @@ $(document).ready(function() {
         $("#theme-toggle").text("Dark Mode");
     }
 
-    $("#theme-toggle").click(function() {
+    $("#theme-toggle").click(function () {
         $("body").toggleClass("dark-theme");
         if ($("body").hasClass("dark-theme")) {
             localStorage.setItem("theme", "dark");
@@ -15,6 +15,31 @@ $(document).ready(function() {
         } else {
             localStorage.setItem("theme", "light");
             $(this).text("Dark Mode");
+        }
+    });
+
+    let loggedInUser = localStorage.getItem("velora_user");
+    if (loggedInUser) {
+        $("#auth-link").text("Hi, " + loggedInUser);
+        $("#auth-link").attr("href", "#");
+        $("#admin-link").show();
+        $("#logout-btn").show();
+    }
+
+    $("#logout-btn").click(function () {
+        localStorage.removeItem("velora_user");
+        window.location.href = "index.html";
+    });
+
+    $("#loginForm").submit(function (event) {
+        event.preventDefault();
+        let user = $("#login-name").val().trim();
+        let pass = $("#login-pass").val().trim();
+        if (user !== "" && pass.length >= 4) {
+            localStorage.setItem("velora_user", user);
+            window.location.href = "index.html";
+        } else {
+            $("#loginError").text("Invalid name or password (min 4 chars).");
         }
     });
 
@@ -37,16 +62,16 @@ $(document).ready(function() {
                 $("#api-products").html("<p class='error-msg'>Failed to load API data. Please try again later.</p>");
             });
 
-        $("#api-search").keyup(function() {
+        $("#api-search").keyup(function () {
             let value = $(this).val().toLowerCase();
-            $("#api-products .product-card").filter(function() {
+            $("#api-products .product-card").filter(function () {
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
             });
         });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    $("#password").on("keyup", function() {
+    $("#password").on("keyup", function () {
         let val = $(this).val();
         let indicator = $("#strengthIndicator");
         if (val.length === 0) { indicator.text(""); }
@@ -55,7 +80,7 @@ $(document).ready(function() {
         else { indicator.text("Strong Password").removeClass("weak medium").addClass("strong"); }
     });
 
-    $("#confirmPassword").on("keyup", function() {
+    $("#confirmPassword").on("keyup", function () {
         let pass = $("#password").val();
         let confirm = $(this).val();
         if (confirm !== pass) {
@@ -65,7 +90,7 @@ $(document).ready(function() {
         }
     });
 
-    $("#regForm").submit(function(event) {
+    $("#regForm").submit(function (event) {
         event.preventDefault();
         let isValid = true;
         if ($("#name").val().trim() === "") {
@@ -85,7 +110,7 @@ $(document).ready(function() {
         }
     });
 
-    $("#addProductBtn").click(function() {
+    $("#addProductBtn").click(function () {
         let name = $("#newProductName").val().trim();
         let price = $("#newProductPrice").val().trim();
         if (name !== "" && price !== "") {
@@ -101,13 +126,13 @@ $(document).ready(function() {
         } else { alert("Please fill in both fields."); }
     });
 
-    $("#productTableBody").on("click", ".delete-btn", function() {
+    $("#productTableBody").on("click", ".delete-btn", function () {
         if (confirm("Are you sure you want to delete this product?")) {
             $(this).closest("tr").remove();
         }
     });
 
-    $("#productTableBody").on("click", ".edit-btn", function() {
+    $("#productTableBody").on("click", ".edit-btn", function () {
         let row = $(this).closest("tr");
         let currentName = row.find("td").eq(0).text();
         let currentPrice = row.find("td").eq(1).text();
@@ -120,18 +145,18 @@ $(document).ready(function() {
     });
 
     let activeCategory = "all";
-    $(".filter-btn").click(function() {
+    $(".filter-btn").click(function () {
         $(".filter-btn").removeClass("active");
         $(this).addClass("active");
         activeCategory = $(this).data("category");
         filterProducts();
     });
 
-    $("#searchInput").keyup(function() { filterProducts(); });
+    $("#searchInput").keyup(function () { filterProducts(); });
 
     function filterProducts() {
         let searchText = $("#searchInput").val().toLowerCase();
-        $(".product-card").each(function() {
+        $(".product-card").each(function () {
             if (!$(this).hasClass("api-card")) {
                 let name = $(this).data("name").toLowerCase();
                 let category = $(this).data("category");
@@ -144,21 +169,21 @@ $(document).ready(function() {
 
     let images = $(".lightbox-img");
     let currentIndex = 0;
-    $(".lightbox-img").click(function() {
+    $(".lightbox-img").click(function () {
         currentIndex = $(this).index(".lightbox-img");
         let src = $(this).attr("src");
         $("#lightboxImg").attr("src", src);
         $("#lightbox").fadeIn(400).css("display", "flex");
     });
 
-    $("#closeLightbox").click(function() { $("#lightbox").fadeOut(400); });
-    $("#nextArrow").click(function(e) {
+    $("#closeLightbox").click(function () { $("#lightbox").fadeOut(400); });
+    $("#nextArrow").click(function (e) {
         e.stopPropagation();
         currentIndex++;
         if (currentIndex >= images.length) { currentIndex = 0; }
         $("#lightboxImg").attr("src", $(images[currentIndex]).attr("src"));
     });
-    $("#prevArrow").click(function(e) {
+    $("#prevArrow").click(function (e) {
         e.stopPropagation();
         currentIndex--;
         if (currentIndex < 0) { currentIndex = images.length - 1; }
