@@ -2,11 +2,11 @@
 
 **Live site:** https://nargess377.github.io/online-shop
 
-**Report** https://drive.google.com/file/d/1ijptS-gkJlePFG2xDUWikSW5SbBvExJo/view?usp=sharing
+**Report:** https://drive.google.com/file/d/1ijptS-gkJlePFG2xDUWikSW5SbBvExJo/view?usp=sharing
 
-**Presentation** https://docs.google.com/presentation/d/1d5a2gnuqCyqR2kR8gf6PFVHbecJ08AOvcVwoAIwt8VE/edit?usp=sharing
+**Presentation:** https://docs.google.com/presentation/d/1d5a2gnuqCyqR2kR8gf6PFVHbecJ08AOvcVwoAIwt8VE/edit?usp=sharing
 
-## What this is
+## About
 
 VELORA is a multi-page online shop we built for our Web Technologies course. It sells clothes, gadgets and cosmetics all in one place, and we added the dynamic features on top of a normal static site. Dark mode, login, an FAQ, an admin table and a page that loads real products from a public API.
 
