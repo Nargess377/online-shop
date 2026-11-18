@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (localStorage.getItem("theme") === "dark") {
         $("body").addClass("dark-theme");
         $("#theme-toggle").text("Light Mode");
@@ -33,13 +35,13 @@ $(document).ready(function() {
 
     $("#loginForm").submit(function(event) {
         event.preventDefault();
-        let user = $("#login-name").val().trim();
+        let email = $("#login-email").val().trim();
         let pass = $("#login-pass").val().trim();
-        if (user !== "" && pass.length >= 4) {
-            localStorage.setItem("velora_user", user);
+        if (emailRegex.test(email) && pass.length >= 4) {
+            localStorage.setItem("velora_user", email);
             window.location.href = "index.html";
         } else {
-            $("#loginError").text("Invalid name or password (min 4 chars).");
+            $("#loginError").text("Please enter a valid email and a password of at least 4 characters.");
         }
     });
 
@@ -80,41 +82,90 @@ $(document).ready(function() {
         });
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     $("#password").on("keyup", function() {
         let val = $(this).val();
         let indicator = $("#strengthIndicator");
-        if (val.length === 0) { indicator.text(""); }
-        else if (val.length < 6) { indicator.text("Weak Password").removeClass("medium strong").addClass("weak"); }
-        else if (val.length >= 6 && val.length < 10) { indicator.text("Medium Password").removeClass("weak strong").addClass("medium"); }
-        else { indicator.text("Strong Password").removeClass("weak medium").addClass("strong"); }
+
+        if (val.length === 0) {
+            indicator.text("").removeClass("weak medium strong");
+            return;
+        }
+
+        let types = 0;
+        if (/[a-zA-Z]/.test(val)) types++;
+        if (/[0-9]/.test(val)) types++;
+        if (/[^a-zA-Z0-9]/.test(val)) types++;
+
+        let strength;
+        if (val.length < 6 || types === 1) {
+            strength = "weak";
+        } else if (val.length >= 8 && types >= 3) {
+            strength = "strong";
+        } else {
+            strength = "medium";
+        }
+
+        let labels = {
+            weak: "Weak Password",
+            medium: "Medium Password",
+            strong: "Strong Password"
+        };
+
+        indicator
+            .text(labels[strength])
+            .removeClass("weak medium strong")
+            .addClass(strength);
     });
 
     $("#confirmPassword").on("keyup", function() {
         let pass = $("#password").val();
         let confirm = $(this).val();
         if (confirm !== pass) {
-            $("#confirmError").text("Passwords do not match.").addClass("error-msg");
+            $("#confirmError").text("Passwords do not match.")
+                .removeClass("success-msg")
+                .addClass("error-msg");
         } else {
-            $("#confirmError").text("Passwords match.").removeClass("error-msg").addClass("success-msg");
+            $("#confirmError").text("Passwords match.")
+                .removeClass("error-msg")
+                .addClass("success-msg");
         }
     });
 
     $("#regForm").submit(function(event) {
         event.preventDefault();
         let isValid = true;
+
         if ($("#name").val().trim() === "") {
-            $("#nameError").text("Name is required."); isValid = false;
-        } else { $("#nameError").text(""); }
+            $("#nameError").text("Name is required.");
+            isValid = false;
+        } else {
+            $("#nameError").text("");
+        }
+
         if (!emailRegex.test($("#email").val())) {
-            $("#emailError").text("Please enter a valid email."); isValid = false;
-        } else { $("#emailError").text(""); }
-        if ($("#password").val().length < 6) { isValid = false; }
-        if ($("#password").val() !== $("#confirmPassword").val()) { isValid = false; }
+            $("#emailError").text("Please enter a valid email.");
+            isValid = false;
+        } else {
+            $("#emailError").text("");
+        }
+
+        if ($("#password").val().length < 6) {
+            $("#passwordError").text("Password must be at least 6 characters.");
+            isValid = false;
+        } else {
+            $("#passwordError").text("");
+        }
+
+        if ($("#password").val() !== $("#confirmPassword").val()) {
+            isValid = false;
+        }
+
         if (isValid) {
             alert("Registration Successful!");
             $("#regForm")[0].reset();
-            $("#strengthIndicator").text(""); $("#confirmError").text("");
+            $("#strengthIndicator").text("").removeClass("weak medium strong");
+            $("#confirmError").text("").removeClass("error-msg success-msg");
+            $("#passwordError").text("");
         } else {
             alert("Please fix the errors before submitting.");
         }
